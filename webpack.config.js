@@ -6,7 +6,13 @@ var HtmlWebpackPlugin = require('html-webpack-plugin');
 
 var common = {
 
-  entry: [path.resolve(ROOT_PATH, 'app/main')], output: {
+  entry: [path.resolve(ROOT_PATH, 'app/main')],
+
+  resolve: {
+    extensions: ['', '.js', '.jsx']
+  },
+
+  output: {
     path: path.resolve(ROOT_PATH, 'build'),
     filename: 'bundle.js'
   },
@@ -19,6 +25,12 @@ var common = {
 
   module: {
     loaders: [
+      {
+        test: /\.jsx?$/,
+        loader: 'babel?stage=1',
+        include: path.resolve(ROOT_PATH, 'app')
+      },
+
       {
         test: /\.css$/,
         loaders: ['style', 'css']
