@@ -10,7 +10,7 @@ module.exports = {
 
   output: {
     path: path.resolve(ROOT_PATH, 'build'),
-    filename: 'bundle.js',
+    filename: 'bundle.js'
   },
 
   module: {
