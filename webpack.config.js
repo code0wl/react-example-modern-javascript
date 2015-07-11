@@ -1,5 +1,6 @@
 var path = require('path');
 var merge = require('webpack-merge');
+var webpack = require('webpack');
 var TARGET = process.env.TARGET;
 var ROOT_PATH = path.resolve(__dirname);
 var HtmlWebpackPlugin = require('html-webpack-plugin');
@@ -27,7 +28,7 @@ var common = {
     loaders: [
       {
         test: /\.jsx?$/,
-        loader: 'babel?stage=1',
+        loaders: ['react-hot', 'babel?stage=1'],
         include: path.resolve(ROOT_PATH, 'app')
       },
 
@@ -41,7 +42,21 @@ var common = {
 
 switch (TARGET) {
   case 'build':
-    module.exports = common;
+    module.exports = merge(common, {
+      plugins: [
+        new webpack.optimize.UglifyJsPlugin({
+          compress: {
+            warnings: false
+          }
+        }),
+        new webpack.DefinePlugin({
+          'process.env': {
+            'NODE_ENV': JSON.stringify('production')
+          }
+        })
+      ]
+    });
+
     break;
 
   case 'dev':
