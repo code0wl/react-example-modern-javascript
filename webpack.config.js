@@ -1,11 +1,43 @@
 var path = require('path');
-var rPath = path.resolve(__dirname);
-module.exports = {
-  entry: [
-    'webpack/hot/dev-server',
-    path.resolve(rPath, 'app/main.js'),
+var merge = require('webpack-merge');
+var TARGET = process.env.TARGET;
+var ROOT_PATH = path.resolve(__dirname);
+var HtmlWebpackPlugin = require('html-webpack-plugin');
+
+var common = {
+
+  entry: [path.resolve(ROOT_PATH, 'app/main')], output: {
+    path: path.resolve(ROOT_PATH, 'build'),
+    filename: 'bundle.js'
+  },
+
+  plugins: [
+    new HtmlWebpackPlugin({
+      title: 'Kanban app'
+    })
   ],
-  output: {
-    path: path.resolve(rPath, 'dist'),
-    filename: 'bundle.js',
-  }, };
+
+  module: {
+    loaders: [
+      {
+        test: /\.css$/,
+        loaders: ['style', 'css']
+      }
+    ]
+  }
+};
+
+switch (TARGET) {
+  case 'build':
+    module.exports = common;
+    break;
+
+  case 'dev':
+    module.exports = merge(common, {
+      entry: [
+        'webpack-dev-server/client?http://localhost:8080',
+        'webpack/hot/dev-server'
+      ]
+    });
+    break;
+}
