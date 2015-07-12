@@ -7,9 +7,16 @@ class SearchBar extends React.Component {
 
   }
 
-  render() {
+  render () {
     return (
-      <p>Search bar component</p>
+    <form>
+      <input type="text" placeholder="Search..." />
+      <p>
+        <input type="checkbox" />
+        {' '}
+        Only show products in stock
+      </p>
+    </form>
     );
   }
 }

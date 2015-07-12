@@ -6,8 +6,8 @@ import FilterableProductTable from './src/filterable-product-table';
 renderShell();
 
 function renderShell() {
-  var shell = document.createElement('h1');
+  var shell = document.createElement('div');
   shell.className = 'app-shell';
   document.body.appendChild(shell);
-  React.render(<FilterableProductTable />, shell);
+  React.render(<FilterableProductTable/>, shell);
 }

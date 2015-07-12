@@ -1,6 +1,6 @@
 import React from 'react';
 
-class CategoryHeader extends React.Component {
+class CategoryRow extends React.Component {
 
   constructor() {
     super();
@@ -8,10 +8,13 @@ class CategoryHeader extends React.Component {
 
   render() {
     return (
-      <h2>Category header</h2>
+      <tr>
+        <th colSpan="2">{this.props.category}</th>
+      </tr>
     );
+
   }
 
 }
 
-export default CategoryHeader;
+export default CategoryRow;

@@ -6,9 +6,8 @@ class FilterableProductTable extends React.Component {
 
   constructor() {
     super();
-
     this.state = {
-      items: [
+      products: [
         {category: "Sporting Goods", price: "$49.99", stocked: true, name: "Football"},
         {category: "Sporting Goods", price: "$9.99", stocked: true, name: "Baseball"},
         {category: "Sporting Goods", price: "$29.99", stocked: false, name: "Basketball"},
@@ -23,7 +22,7 @@ class FilterableProductTable extends React.Component {
     return (
       <div>
         <SearchBar />
-        <ProductTable/>
+        <ProductTable products={this.state.products} />
       </div>
     )
   }

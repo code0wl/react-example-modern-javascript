@@ -1,17 +1,20 @@
 import React from 'react';
-import ProductRow from './product-row';
 
-class CategoryRow extends React.Component {
+class ProductRow extends React.Component {
 
   constructor(){
     super();
   }
 
   render() {
+    var name = this.props.product.stocked ? this.props.product.name : <span className="error">{this.props.product.name}</span>;
     return (
-      <ProductRow />
+      <tr>
+        <td>{name}</td>
+        <td>{this.props.product.price}</td>
+      </tr>
     );
   }
 }
 
-export default CategoryRow;
+export default ProductRow;
