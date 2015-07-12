@@ -4,10 +4,8 @@ This is a short performance demo I am making to benchmark how React is performin
 
 Also a nice introduction for someone who is wondering to use React. 
 
-``
-npm build 
-``
+<code>npm build </code>
 
-``
-npm start 
-``
+
+<code>npm start </code>
+
