@@ -1,12 +1,12 @@
 import './stylesheets/main.css';
 import React from 'react';
-import Kanban from './src/Kanban';
+import App from './src/app';
 
 renderShell();
 
 function renderShell() {
-  var shell = document.createElement('div');
-  shell.className = 'kanban-shell';
+  var shell = document.createElement('h1');
+  shell.className = 'app-shell';
   document.body.appendChild(shell);
-  React.render(<Kanban />, shell);
+  React.render(<App />, shell);
 }

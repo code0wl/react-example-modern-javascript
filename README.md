@@ -1,11 +1,12 @@
-# Kanban board in React
+# Webpack react build starter kit
 
-This is a short performance demo I am making to benchmark how React is performing against in the Devtools profiles.
+The aim is to keep a clean, simple, highly modifiable and non-biased way of setting up a react project with react-hot-loader. Inspired by Survive.js
 
-Also a nice introduction for someone who is wondering to use React. 
-
-<code>npm build </code>
-
-
-<code>npm start </code>
+<code>
+  npm install 
+    
+  npm build
+  
+  npm start 
+</code>
 
