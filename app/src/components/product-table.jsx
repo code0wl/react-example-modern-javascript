@@ -1,19 +1,16 @@
 import React from 'react';
-import Items from './items';
-import SearchBar from './search-bar';
+import CategoryRow from './category-row';
 
 class ProductTable extends React.Component {
 
   constructor() {
     super();
-
   }
 
   render() {
     return (
       <div>
-        <SearchBar />
-        <Items />
+        <CategoryRow />
       </div>
     );
   }

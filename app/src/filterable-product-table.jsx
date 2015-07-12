@@ -1,7 +1,8 @@
 import React from 'react';
 import ProductTable from './components/product-table';
+import SearchBar from './components/search-bar';
 
-class App extends React.Component {
+class FilterableProductTable extends React.Component {
 
   constructor() {
     super();
@@ -20,9 +21,12 @@ class App extends React.Component {
 
   render() {
     return (
-      <ProductTable/>
+      <div>
+        <SearchBar />
+        <ProductTable/>
+      </div>
     )
   }
 }
 
-export default App;
+export default FilterableProductTable;
