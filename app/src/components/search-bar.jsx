@@ -4,7 +4,6 @@ class SearchBar extends React.Component {
 
   constructor() {
     super();
-
   }
 
   render () {
