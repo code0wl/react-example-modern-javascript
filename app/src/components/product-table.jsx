@@ -14,9 +14,11 @@ class ProductTable extends React.Component {
     var rows = [];
     var lastCategory = null;
 
-    this.props.products.forEach(function(product) {
+    this.props.products.map((product) => {
       if (product.category !== lastCategory) {
-        rows.push(<CategoryRow category={product.category} key={product.category} />);
+        rows.push(
+          <CategoryRow category={product.category} key={product.category} />
+        );
       }
       rows.push(<ProductRow product={product} key={product.name} />);
       lastCategory = product.category;
