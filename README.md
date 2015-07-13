@@ -1,6 +1,6 @@
-# Webpack react build starter kit
+# React example using es2015
 
-The aim is to keep a clean, simple, highly modifiable and non-biased way of setting up a react project with react-hot-loader. Inspired by Survive.js
+Recreating the react example using the latest release from ECMAScript. A help and also a reference for myself for the gotcha's when transforming your code
 
 
 ``
@@ -15,3 +15,4 @@ npm build
 npm start 
 ``
 
+Check the app at http://localhost:8080
