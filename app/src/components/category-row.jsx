@@ -12,9 +12,7 @@ class CategoryRow extends React.Component {
         <th colSpan="2">{this.props.category}</th>
       </tr>
     );
-
   }
-
 }
 
 export default CategoryRow;
