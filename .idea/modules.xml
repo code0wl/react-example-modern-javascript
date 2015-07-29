@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<project version="4">
-  <component name="ProjectModuleManager">
-    <modules>
-      <module fileurl="file://$PROJECT_DIR$/../../webpack-react-boilerplate/.idea/Kanban_react.iml" filepath="$PROJECT_DIR$/../../webpack-react-boilerplate/.idea/Kanban_react.iml" />
-      <module fileurl="file://$PROJECT_DIR$/../simple-example/.idea/webpack-react-starter.iml" filepath="$PROJECT_DIR$/../simple-example/.idea/webpack-react-starter.iml" />
-    </modules>
-  </component>
-</project>

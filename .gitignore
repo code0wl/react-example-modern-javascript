@@ -1,7 +1,7 @@
 node_modules
-
 build
-
+.DS_Store
+app/.DS_Store
 
 ### JetBrains template
 # Covers JetBrains IDEs: IntelliJ, RubyMine, PhpStorm, AppCode, PyCharm, CLion
