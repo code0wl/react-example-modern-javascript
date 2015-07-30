@@ -1,5 +1,5 @@
 {
-  "name": "kanban",
+  "name": "React ES2015 example",
   "version": "1.0.0",
   "description": "This is a short performance demo I am making to benchmark how React is performing against in the Devtools profiles.",
   "main": "webpack.config.js",
@@ -24,12 +24,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Ositoozy/Kanban_react.git"
+    "url": "git+https://github.com/Ositoozy/react-example-es2015.git"
   },
-  "author": "",
+  "author": "Oscar Lodriguez",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Ositoozy/Kanban_react/issues"
+    "url": "https://github.com/Ositoozy/react-example-es2015.git/issues"
   },
-  "homepage": "https://github.com/Ositoozy/Kanban_react#readme"
+  "homepage": "https://github.com/Ositoozy/react-example-es2015.git#readme"
 }
