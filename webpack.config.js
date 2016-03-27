@@ -1,7 +1,7 @@
 var path = require('path');
 var merge = require('webpack-merge');
 var webpack = require('webpack');
-var TARGET = process.env.TARGET;
+var TARGET = process.env.TARGET || 'dev';
 var ROOT_PATH = path.resolve(__dirname);
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 
@@ -28,7 +28,7 @@ var common = {
         loaders: [
             {
                 test: /\.jsx?$/,
-                loaders: ['react-hot', 'babel?stage=1'],
+                loaders: ['babel'],
                 include: path.resolve(ROOT_PATH, 'app')
             },
 
