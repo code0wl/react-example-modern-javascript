@@ -36,6 +36,7 @@
   "license": "MIT",
   "dependencies": {
     "bootstrap": "^3.3.6",
+    "flux": "^2.1.1",
     "jquery": "^2.2.3",
     "redux": "^3.5.1"
   }
