@@ -4,10 +4,11 @@ var webpack = require('webpack');
 var TARGET = process.env.TARGET || 'dev';
 var ROOT_PATH = path.resolve(__dirname);
 var HtmlWebpackPlugin = require('html-webpack-plugin');
+var ExtractTextPlugin = require("extract-text-webpack-plugin");
 
 var common = {
 
-    entry: [path.resolve(ROOT_PATH, 'app/main')],
+    entry: [path.resolve(ROOT_PATH, 'src/index')],
 
     resolve: {
         extensions: ['', '.js', '.jsx']
@@ -21,7 +22,10 @@ var common = {
     plugins: [
         new HtmlWebpackPlugin({
             title: 'React ES2015'
-        })
+        }),
+		new ExtractTextPlugin("yiifaa.css", {
+			allChunks: true
+		})
     ],
 
     module: {
@@ -29,13 +33,18 @@ var common = {
             {
                 test: /\.jsx?$/,
                 loaders: ['babel'],
-                include: path.resolve(ROOT_PATH, 'app')
+                include: path.resolve(ROOT_PATH, 'src')
             },
 
             {
                 test: /\.css$/,
-                loaders: ['style', 'css']
-            }
+                //loaders: ['style', 'css']
+				loader: ExtractTextPlugin.extract("style-loader", "css-loader?advanced=1")
+            },
+			{
+					test: /\.(png|woff|woff2|eot|ttf|svg)$/, 
+					loader: 'url-loader?limit=100000'
+			}
         ]
     }
 };
