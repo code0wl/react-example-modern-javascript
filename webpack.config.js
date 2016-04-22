@@ -44,7 +44,19 @@ var common = {
 			{
 					test: /\.(png|woff|woff2|eot|ttf|svg)$/, 
 					loader: 'url-loader?limit=100000'
-			}
+			},
+            {
+                    test: /\.scss$/,
+                    loader: ExtractTextPlugin.extract("style-loader", "css-loader?advanced=1!sass-loader")
+            },
+            {
+                    test: /\.less$/,
+                    loader: ExtractTextPlugin.extract("style-loader", "css-loader?advanced=1!less-loader")
+            },
+            {
+                    test: /\.(png|jpg|jpeg|gif)$/,
+                    loader: "url-loader?limit=100000"
+            },
         ]
     }
 };

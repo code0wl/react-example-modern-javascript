@@ -29,3 +29,4 @@
 
 
 入门教程请参考<a href="http://www.ruanyifeng.com/blog/2015/03/react.html">React入门实例教程</a>
+https://shellmonger.com/2015/08/17/building-an-es6jsxreact-flux-app-part-2-the-flux/

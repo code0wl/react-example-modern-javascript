@@ -5,7 +5,7 @@ var ROOT_PATH = path.resolve(__dirname);
 module.exports = {
     entry: [
         'webpack/hot/dev-server',
-        path.resolve(ROOT_PATH, 'app/main')
+        path.resolve(ROOT_PATH, 'src/index')
     ],
 
     output: {
