@@ -8,7 +8,7 @@ const ProductTable = ({products, filterText, inStockOnly}) => {
         lastCategory = null;
 
     products.map((product) => {
-        if (product.name.indexOf(filterText) === -1 || (!product.stocked && inStockOnly)) {
+        if (product.name.toLowerCase().indexOf(filterText.toLowerCase()) === -1 || (!product.stocked && inStockOnly)) {
             return;
         }
 
