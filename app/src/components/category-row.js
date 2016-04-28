@@ -1,9 +1,7 @@
 import React from 'react';
 
-const CategoryRow = ({category}) => (
+export default ({category}) => (
     <tr>
         <th colSpan="2">{category}</th>
     </tr>
 );
-
-export default CategoryRow;

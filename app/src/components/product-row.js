@@ -1,6 +1,6 @@
 import React from 'react';
 
-const ProductRow = ({product}) => {
+export default ({product}) => {
     var name = product.stocked ? product.name : <span style={{color: 'red'}}> {product.name} </span>;
     return (
         <tr>
@@ -9,5 +9,3 @@ const ProductRow = ({product}) => {
         </tr>
     );
 };
-
-export default ProductRow;
