@@ -1,9 +1,9 @@
-import React from 'react';
+import React, {Component} from 'react';
 import ProductTable from './components/product-table';
 import SearchBar from './components/search-bar';
 import products from './models/products';
 
-class FilterableProductTable extends React.Component {
+class FilterableProductTable extends Component {
 
     constructor() {
         super();
@@ -27,14 +27,12 @@ class FilterableProductTable extends React.Component {
         return (
             <div>
                 <SearchBar
-                    filterText={this.state.filterText}
-                    inStockOnly={this.state.inStockOnly}
+                    {...this.state}
                     onUserInput={this.handleUserInput}
                 />
                 <ProductTable
                     products={products}
-                    filterText={this.state.filterText}
-                    inStockOnly={this.state.inStockOnly}
+                    {...this.state}
                 />
             </div>
         )

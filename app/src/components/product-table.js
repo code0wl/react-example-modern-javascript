@@ -2,7 +2,7 @@ import React from 'react';
 import CategoryRow from './category-row';
 import ProductRow from './product-row';
 
-const ProductTable = ({products, filterText, inStockOnly}) => {
+export default ({products, filterText, inStockOnly}) => {
 
     let rows = [],
         lastCategory = null;
@@ -33,5 +33,3 @@ const ProductTable = ({products, filterText, inStockOnly}) => {
         </table>
     );
 }
-
-export default ProductTable;
