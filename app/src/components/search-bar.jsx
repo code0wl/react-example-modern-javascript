@@ -8,7 +8,7 @@ class SearchBar extends Component {
     }
 
     handleChange() {
-        this.props.onUserInput (
+        this.props.onUserInput(
             this.refs['filterTextInput'].value,
             this.refs['inStockOnlyInput'].checked
         );
@@ -24,16 +24,16 @@ class SearchBar extends Component {
                     ref="filterTextInput"
                     onChange={this.handleChange}
                 />
-                <p>
-                    <input
-                        type="checkbox"
-                        checked={this.props.inStockOnly}
-                        ref="inStockOnlyInput"
-                        onChange={this.handleChange}
-                    />
-                    {' '}
-                    Only show products in stock
-                </p>
+
+                <input
+                    type="checkbox"
+                    checked={this.props.inStockOnly}
+                    ref="inStockOnlyInput"
+                    onChange={this.handleChange}
+                />
+                {' '}
+                Only show products in stock
+                
             </form>
         );
     }

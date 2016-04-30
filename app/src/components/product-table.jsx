@@ -33,6 +33,6 @@ export default ({products, filterText, inStockOnly}) => {
             </table>
         );
     } else {
-        return (<p>No results found</p>);
+        return <p>\_(ツ)_/¯</p>;
     }
 }
