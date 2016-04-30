@@ -7,7 +7,7 @@ export default ({products, filterText, inStockOnly}) => {
     let rows = [], lastCategory = null;
 
     products.map((product) => {
-        if (product.name.toLowerCase().indexOf(filterText.toLowerCase()) === -1 || (!product.stocked && inStockOnly)) {
+        if (!product.name.toLowerCase().includes(filterText.toLowerCase()) || (!product.stocked && inStockOnly)) {
             return;
         }
 
