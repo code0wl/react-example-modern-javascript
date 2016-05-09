@@ -7,7 +7,6 @@ Follow the original and great tutorial here
 [Changelog found here](https://facebook.github.io/react/blog/2016/04/07/react-v15.html)
 
 ```
-npm i 
 npm start 
 ```
 

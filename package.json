@@ -27,7 +27,7 @@
     "private": false,
     "scripts": {
         "build": "webpack",
-        "start": "webpack-dev-server --devtool eval-source --progress --colors --hot --inline --history-api-fallback"
+        "start": "npm i && webpack-dev-server --devtool eval-source --progress --colors --hot --inline --history-api-fallback"
     },
     "repository": {
         "type": "git",
