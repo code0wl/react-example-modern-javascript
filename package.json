@@ -39,8 +39,8 @@
   },
   "homepage": "https://github.com/Ositoozy/react-example-es2015.git#readme",
   "dependencies": {
-    "react": "^15.2.0",
-    "react-dom": "^15.2.0",
+    "react": "^15.3.1",
+    "react-dom": "^15.3.1",
     "tapable": "^0.2.4"
   }
 }

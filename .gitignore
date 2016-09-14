@@ -3,6 +3,7 @@ build
 .DS_Store
 app/.DS_Store
 *.log
+.vscode
 
 ### JetBrains template
 # Covers JetBrains IDEs: IntelliJ, RubyMine, PhpStorm, AppCode, PyCharm, CLion
